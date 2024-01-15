@@ -20,8 +20,6 @@ Um simples aplicativo Flutter que utiliza a API de cotações de câmbio para ob
 3. Execute o aplicativo em um emulador ou dispositivo Flutter.
    ```bash
     flutter run
-
-
 ## Contribuição
 
 Contribuições são bem-vindas! Se você tiver sugestões, melhorias ou correções, fique à vontade para abrir uma issue ou enviar um pull request.

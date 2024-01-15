@@ -1,7 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:intl/intl.dart';
 
 void main() {
   runApp(MyApp());
@@ -32,24 +31,37 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   Future<void> fetchDolarValue() async {
-    final response = await http
-        .get(Uri.parse('https://api.exchangerate-api.com/v4/latest/USD'));
-    if (response.statusCode == 200) {
-      final data = json.decode(response.body);
-      setState(() {
-        dolarValue = data['rates']['BRL'];
-        convertToPokemon();
-      });
-    } else {
-      throw Exception('Erro ao obter a cotação do dólar');
+    try {
+      final response = await http
+          .get(Uri.parse('https://api.exchangerate-api.com/v4/latest/USD'));
+
+      if (response.statusCode == 200) {
+        final data = json.decode(response.body);
+        setState(() {
+          dolarValue = data['rates']['BRL'];
+          convertToPokemon();
+        });
+      } else {
+        showErrorSnackBar('Erro ao obter a cotação do dólar');
+      }
+    } catch (e) {
+      showErrorSnackBar('Erro inesperado');
     }
   }
 
   void convertToPokemon() {
     setState(() {
-      pokemonNumber = (dolarValue * 100).round() %
-          1015; //1015 número aproximado de Pokémon hoje.
+      pokemonNumber = (dolarValue * 100).round() % 1015;
     });
+  }
+
+  void showErrorSnackBar(String message) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(message),
+        duration: Duration(seconds: 3),
+      ),
+    );
   }
 
   @override
