@@ -8,6 +8,18 @@ Um simples aplicativo Flutter que utiliza a API de cotações de câmbio para ob
 - Conversão do valor do dólar para um número inteiro.
 - Exibição do Pokémon correspondente com base no valor convertido.
 
+## Capturas de tela
+
+<p align="center">
+  <img src="screenshots\Screenshot_1.png" alt="Texto Alternativo">
+</p>
+<p align="center">
+  <img src="screenshots\Screenshot_2.png" alt="Texto Alternativo">
+</p>
+
+## Dependências
+- [http](https://pub.dev/packages/http) - Para fazer solicitações HTTP para a API ExchangeRate-API.
+
 ## Como usar
 
 1. Clone este repositório.
