@@ -1,16 +1,31 @@
-# flutter_application_1
+# Cotação do Dólar e Pokémon
 
-A new Flutter project.
+Um simples aplicativo Flutter que utiliza a API de cotações de câmbio para obter a cotação atual do dólar em relação ao real (BRL). O valor do dólar é convertido em um número inteiro, que é então utilizado para exibir um Pokémon correspondente. Este projeto é uma demonstração básica de integração de API, manipulação de dados e renderização de conteúdo dinâmico em Flutter.
 
-## Getting Started
+## Recursos
 
-This project is a starting point for a Flutter application.
+- Integração com a API de cotações de câmbio (ExchangeRate-API).
+- Conversão do valor do dólar para um número inteiro.
+- Exibição do Pokémon correspondente com base no valor convertido.
 
-A few resources to get you started if this is your first Flutter project:
+## Como usar
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+1. Clone este repositório.
+   ```bash
+   git clone https://github.com/GabrielAugustoFerreiraMaia/Pok-d-lar
+2. Execute flutter pub get para instalar as dependências
+   ```bash
+   cd cotacao-dolar-pokemon
+    flutter pub get
+3. Execute o aplicativo em um emulador ou dispositivo Flutter.
+   ```bash
+    flutter run
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+## Contribuição
+
+Contribuições são bem-vindas! Se você tiver sugestões, melhorias ou correções, fique à vontade para abrir uma issue ou enviar um pull request.
+
+## Licença
+
+Este projeto está licenciado sob a [MIT License](LICENSE).

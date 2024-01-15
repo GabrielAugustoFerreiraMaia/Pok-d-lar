@@ -47,8 +47,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void convertToPokemon() {
     setState(() {
-      pokemonNumber =
-          (dolarValue * 100).round() % 151 + 1; // Assumindo 151 Pokémon
+      pokemonNumber = (dolarValue * 100).round() %
+          1015; //1015 número aproximado de Pokémon hoje.
     });
   }
 
